@@ -1,240 +1,156 @@
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
 body{
 
-    overflow:hidden;
+    margin:0;
+
+    font-family:
+    Arial,
+    "Noto Sans Thai",
+    sans-serif;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #253b63,
+        #101827 65%
+    );
+
+    color:white;
+
+    min-height:100vh;
 
 }
 
 
-#game{
+button{
 
-    height:100vh;
+    border:0;
 
-    max-width:700px;
+    border-radius:14px;
+
+    padding:15px 20px;
+
+    margin:6px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:#263a5c;
+
+    color:white;
+
+    transition:.15s;
+
+}
+
+
+button:active{
+
+    transform:scale(.94);
+
+}
+
+
+.page{
+
+    max-width:1000px;
 
     margin:auto;
 
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-
-header{
-
-    padding:12px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    background:#111c2e;
-
-    font-weight:bold;
-
-}
-
-
-.bars{
-
-    padding:8px 12px;
-
-    background:#18263c;
-
-}
-
-
-.bar{
-
-    height:12px;
-
-    background:#303b4e;
-
-    border-radius:10px;
-
-    overflow:hidden;
-
-    margin:3px 0 8px;
-
-}
-
-
-.bar div{
-
-    height:100%;
-
-    width:100%;
-
-    background:#39d98a;
-
-    transition:.3s;
-
-}
-
-
-.bar.rage div{
-
-    background:#f5b942;
-
-}
-
-
-#battlefield{
-
-    flex:1;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-
-    linear-gradient(
-        #101b2d,
-        #172f35
-    );
-
-}
-
-
-#battlefield::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    radial-gradient(
-        circle at 50% 20%,
-        #304d5d,
-        transparent 40%
-    );
-
-}
-
-
-#player,
-#enemy{
-
-    position:absolute;
-
-    font-size:75px;
-
-    z-index:2;
-
-    user-select:none;
-
-}
-
-
-#player{
-
-    left:18%;
-
-    bottom:22%;
-
-}
-
-
-#enemy{
-
-    right:18%;
-
-    bottom:24%;
-
-}
-
-
-.enemy-info{
-
-    background:#111c2e;
+    padding:25px;
 
     text-align:center;
 
-    padding:8px;
+}
+
+
+.logo{
+
+    padding-top:70px;
 
 }
 
 
-.enemy-hp{
+.logo-icon{
 
-    height:12px;
-
-    background:#333;
-
-    border-radius:10px;
-
-    overflow:hidden;
+    font-size:80px;
 
 }
 
 
-#enemyHpBar{
+.logo h1{
+
+    font-size:45px;
+
+    line-height:.9;
+
+    letter-spacing:5px;
+
+}
+
+
+.logo h1 span{
+
+    color:#67e8f9;
+
+}
+
+
+.logo p{
+
+    color:#b7c8e8;
+
+}
+
+
+.menu-buttons{
+
+    max-width:400px;
+
+    margin:40px auto;
+
+}
+
+
+.menu-buttons button{
+
+    display:block;
 
     width:100%;
 
-    height:100%;
+    background:
+    linear-gradient(
+        135deg,
+        #263d67,
+        #182740
+    );
 
-    background:#e05252;
-
-    transition:.3s;
-
-}
-
-
-.controls{
-
-    background:#101827;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    padding:8px;
+    border:1px solid #4d6590;
 
 }
 
 
-.controls button{
+.version{
 
-    margin:3px;
-
-    padding:12px 5px;
-
-    font-size:13px;
+    color:#7283a5;
 
 }
 
 
-#damageText{
-
-    position:absolute;
-
-    z-index:5;
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    color:#ffe36e;
-
-    pointer-events:none;
-
-}
-
-
-.modal{
+.popup{
 
     position:fixed;
 
     inset:0;
 
-    background:#000c;
-
-    z-index:20;
+    background:#000b;
 
     display:flex;
 
@@ -242,10 +158,19 @@ header{
 
     align-items:center;
 
+    z-index:100;
+
 }
 
 
-.question-box{
+.hidden{
+
+    display:none!important;
+
+}
+
+
+.popup-box{
 
     width:90%;
 
@@ -253,37 +178,159 @@ header{
 
     background:#17243b;
 
-    border:1px solid #536b93;
+    padding:30px;
 
     border-radius:20px;
 
+    text-align:center;
+
+}
+
+
+.characters,
+.dungeons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+
+.character-card,
+.dungeon-card{
+
+    width:300px;
+
     padding:25px;
 
-}
+    background:#17243b;
 
+    border:1px solid #405579;
 
-.question-box button{
-
-    width:100%;
-
-    background:#263d67;
+    border-radius:22px;
 
 }
 
 
-@media(max-width:450px){
+.character-icon,
+.dungeon-image{
 
-    #player,
-    #enemy{
+    font-size:80px;
 
-        font-size:60px;
+}
 
-    }
 
-    .controls button{
+.character-card button,
+.dungeon-card button{
 
-        font-size:11px;
+    width:90%;
 
-    }
+    background:#1d8a9c;
+
+}
+
+
+.stat{
+
+    background:#101827;
+
+    margin:8px;
+
+    padding:8px;
+
+    border-radius:8px;
+
+}
+
+
+.locked{
+
+    opacity:.7;
+
+}
+
+
+.back{
+
+    background:#202d43;
+
+    margin-top:30px;
+
+}
+
+
+.shop-coins{
+
+    font-size:22px;
+
+    margin:20px;
+
+}
+
+
+.shop{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+.item{
+
+    background:#17243b;
+
+    border:1px solid #405579;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    width:250px;
+
+}
+
+
+.item button{
+
+    background:#1d8a9c;
+
+}
+
+
+#inventory{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+.inventory-item{
+
+    background:#17243b;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    min-width:180px;
 
 }
