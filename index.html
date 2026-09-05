@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="theme-color" content="#101827">
+
+    <title>Science Dungeon</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="menu">
+
+    <div class="logo">
+        <div class="logo-icon">⚗️</div>
+        <h1>SCIENCE<br><span>DUNGEON</span></h1>
+        <p>ผจญภัย • ต่อสู้ • เรียนรู้วิทยาศาสตร์</p>
+    </div>
+
+    <div class="menu-buttons">
+
+        <button onclick="location.href='character.html'">
+            ⚔️ START GAME
+        </button>
+
+        <button onclick="showDetails()">
+            📖 GAME DETAILS
+        </button>
+
+        <button onclick="showHowToPlay()">
+            🎮 HOW TO PLAY
+        </button>
+
+        <button onclick="toggleMusic()" id="musicButton">
+            🔊 MUSIC : ON
+        </button>
+
+    </div>
+
+    <div class="version">
+        SCIENCE DUNGEON V1.0
+    </div>
+
+</div>
+
+<div id="popup" class="popup hidden">
+    <div class="popup-box">
+        <h2 id="popupTitle"></h2>
+        <p id="popupText"></p>
+        <button onclick="closePopup()">ปิด</button>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
