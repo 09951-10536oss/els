@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เลือกดันเจี้ยน</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="page">
+
+<h1>🗺️ เลือกดันเจี้ยน</h1>
+
+<div class="dungeons">
+
+    <div class="dungeon-card" onclick="startDungeon('forest')">
+
+        <div class="dungeon-image">🌲</div>
+
+        <h2>Forest Cave</h2>
+
+        <p>
+            ป่าต้องคำสาปที่นำไปสู่ถ้ำมืด
+        </p>
+
+        <div>
+            🏚️ 10 ห้อง
+        </div>
+
+        <div>
+            👹 Boss : Gargan
+        </div>
+
+        <button>เข้าสู่ดันเจี้ยน</button>
+
+    </div>
+
+    <div class="dungeon-card locked">
+
+        <div class="dungeon-image">🏛️</div>
+
+        <h2>Ancient Ruins</h2>
+
+        <p>
+            ซากโบราณสถานที่เต็มไปด้วยสัตว์ประหลาด
+        </p>
+
+        <div>
+            🏚️ 10 ห้อง
+        </div>
+
+        <div>
+            👑 Boss : Giant Bear
+        </div>
+
+        <button onclick="alert('ดันเจี้ยนนี้จะเปิดในเวอร์ชันถัดไป')">
+            🔒 ยังไม่เปิด
+        </button>
+
+    </div>
+
+</div>
+
+<button class="back" onclick="location.href='character.html'">
+← กลับ
+</button>
+
+</div>
+
+<script>
+
+function startDungeon(type){
+
+    localStorage.setItem("dungeon", type);
+    localStorage.setItem("room", "1");
+
+    location.href = "game.html";
+}
+
+</script>
+
+</body>
+</html>
