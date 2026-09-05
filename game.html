@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1,user-scalable=no">
+
+<title>Science Dungeon</title>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/game.css">
+
+</head>
+
+<body>
+
+<div id="game">
+
+    <header>
+
+        <div>
+            <span id="level">LV 1</span>
+            <span id="coins">💰 0</span>
+        </div>
+
+        <div>
+            ห้อง <span id="room">1</span>/10
+        </div>
+
+    </header>
+
+
+    <div class="bars">
+
+        <div>
+            ❤️
+            <div class="bar">
+                <div id="hpBar"></div>
+            </div>
+        </div>
+
+        <div>
+            🔥 RAGE
+            <div class="bar rage">
+                <div id="rageBar"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main id="battlefield">
+
+        <div id="player">
+            🧙
+        </div>
+
+        <div id="enemy">
+            🐍
+        </div>
+
+        <div id="damageText"></div>
+
+    </main>
+
+
+    <div class="enemy-info">
+
+        <h2 id="enemyName">Enraged Snake</h2>
+
+        <div class="enemy-hp">
+            <div id="enemyHpBar"></div>
+        </div>
+
+    </div>
+
+
+    <div class="controls">
+
+        <button onclick="normalAttack()">
+            ⚔️ โจมตี
+        </button>
+
+        <button onclick="useSkill(1)">
+            💨 Skill 1
+        </button>
+
+        <button onclick="useSkill(2)">
+            🌪️ Skill 2
+        </button>
+
+        <button onclick="useSkill(3)">
+            🔥 Skill 3
+        </button>
+
+        <button onclick="usePotion()">
+            🧪 Potion
+        </button>
+
+        <button onclick="activateRage()">
+            😡 RAGE
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="questionModal" class="modal hidden">
+
+    <div class="question-box">
+
+        <h2>🧠 คำถามวิทยาศาสตร์</h2>
+
+        <p id="questionText"></p>
+
+        <div id="answers"></div>
+
+    </div>
+
+</div>
+
+
+<script src="js/save.js"></script>
+<script src="js/player.js"></script>
+<script src="js/enemies.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/inventory.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
