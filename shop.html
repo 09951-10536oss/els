@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>ร้านค้า</title>
+
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<h1>🏪 Science Shop</h1>
+
+<div class="shop-coins">
+💰 เหรียญ: <span id="coins">0</span>
+</div>
+
+
+<div class="shop">
+
+    <div class="item">
+        <div>❤️</div>
+        <h2>Health Potion</h2>
+        <p>ฟื้นฟูพลังชีวิต</p>
+        <strong>50 💰</strong>
+        <button onclick="buy('health')">ซื้อ</button>
+    </div>
+
+
+    <div class="item">
+        <div>🧪</div>
+        <h2>Antidote</h2>
+        <p>รักษาสถานะพิษ</p>
+        <strong>50 💰</strong>
+        <button onclick="buy('antidote')">ซื้อ</button>
+    </div>
+
+
+    <div class="item">
+        <div>⚡</div>
+        <h2>Damage Potion</h2>
+        <p>เพิ่มพลังโจมตีชั่วคราว</p>
+        <strong>300 💰</strong>
+        <button onclick="buy('damage')">ซื้อ</button>
+    </div>
+
+
+    <div class="item">
+        <div>🛡️</div>
+        <h2>Invincibility</h2>
+        <p>อมตะ 10 วินาที</p>
+        <strong>500 💰</strong>
+        <button onclick="buy('invincible')">ซื้อ</button>
+    </div>
+
+
+    <div class="item">
+        <div>🔥</div>
+        <h2>Rage Full</h2>
+        <p>เติมเกจ Rage เต็ม</p>
+        <strong>5000 💰</strong>
+        <button onclick="buy('rage')">ซื้อ</button>
+    </div>
+
+</div>
+
+
+<button class="back" onclick="location.href='game.html'">
+← กลับ
+</button>
+
+</div>
+
+<script src="js/save.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>
