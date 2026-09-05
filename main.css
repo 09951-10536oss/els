@@ -1,0 +1,289 @@
+body{
+
+    overflow:hidden;
+
+}
+
+
+#game{
+
+    height:100vh;
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+header{
+
+    padding:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    background:#111c2e;
+
+    font-weight:bold;
+
+}
+
+
+.bars{
+
+    padding:8px 12px;
+
+    background:#18263c;
+
+}
+
+
+.bar{
+
+    height:12px;
+
+    background:#303b4e;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    margin:3px 0 8px;
+
+}
+
+
+.bar div{
+
+    height:100%;
+
+    width:100%;
+
+    background:#39d98a;
+
+    transition:.3s;
+
+}
+
+
+.bar.rage div{
+
+    background:#f5b942;
+
+}
+
+
+#battlefield{
+
+    flex:1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        #101b2d,
+        #172f35
+    );
+
+}
+
+
+#battlefield::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at 50% 20%,
+        #304d5d,
+        transparent 40%
+    );
+
+}
+
+
+#player,
+#enemy{
+
+    position:absolute;
+
+    font-size:75px;
+
+    z-index:2;
+
+    user-select:none;
+
+}
+
+
+#player{
+
+    left:18%;
+
+    bottom:22%;
+
+}
+
+
+#enemy{
+
+    right:18%;
+
+    bottom:24%;
+
+}
+
+
+.enemy-info{
+
+    background:#111c2e;
+
+    text-align:center;
+
+    padding:8px;
+
+}
+
+
+.enemy-hp{
+
+    height:12px;
+
+    background:#333;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+
+#enemyHpBar{
+
+    width:100%;
+
+    height:100%;
+
+    background:#e05252;
+
+    transition:.3s;
+
+}
+
+
+.controls{
+
+    background:#101827;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    padding:8px;
+
+}
+
+
+.controls button{
+
+    margin:3px;
+
+    padding:12px 5px;
+
+    font-size:13px;
+
+}
+
+
+#damageText{
+
+    position:absolute;
+
+    z-index:5;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#ffe36e;
+
+    pointer-events:none;
+
+}
+
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000c;
+
+    z-index:20;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.question-box{
+
+    width:90%;
+
+    max-width:500px;
+
+    background:#17243b;
+
+    border:1px solid #536b93;
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+
+.question-box button{
+
+    width:100%;
+
+    background:#263d67;
+
+}
+
+
+@media(max-width:450px){
+
+    #player,
+    #enemy{
+
+        font-size:60px;
+
+    }
+
+    .controls button{
+
+        font-size:11px;
+
+    }
+
+}
