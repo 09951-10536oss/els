@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เลือกตัวละคร</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="page">
+
+<h1>⚔️ เลือกนักผจญภัย</h1>
+<p>เลือกตัวละครที่ต้องการใช้</p>
+
+<div class="characters">
+
+    <div class="character-card" onclick="selectCharacter(1)">
+        <div class="character-icon">🗡️</div>
+        <h2>Shadow</h2>
+        <p>นักฆ่าความเร็วสูง</p>
+
+        <div class="stat">
+            ❤️ HP 100
+        </div>
+
+        <div class="stat">
+            ⚔️ ATK 18
+        </div>
+
+        <div class="stat">
+            💨 SPEED 14
+        </div>
+
+        <button>เลือกตัวนี้</button>
+    </div>
+
+    <div class="character-card" onclick="selectCharacter(2)">
+        <div class="character-icon">🛡️</div>
+        <h2>Guardian</h2>
+        <p>นักรบโล่หนัก</p>
+
+        <div class="stat">
+            ❤️ HP 180
+        </div>
+
+        <div class="stat">
+            ⚔️ ATK 28
+        </div>
+
+        <div class="stat">
+            💨 SPEED 7
+        </div>
+
+        <button>เลือกตัวนี้</button>
+    </div>
+
+</div>
+
+<button class="back" onclick="location.href='index.html'">
+    ← กลับ
+</button>
+
+</div>
+
+<script>
+
+function selectCharacter(id){
+
+    localStorage.setItem("selectedCharacter", id);
+
+    location.href = "dungeon.html";
+}
+
+</script>
+
+</body>
+</html>
